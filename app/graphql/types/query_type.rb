@@ -11,5 +11,22 @@ module Types
       Item.all
     end
 
+        #     field :duelist, DuelistType, null: true do
+        #    description "find duelist by id"
+        #    argument :id, ID, required: true
+        # end
+        # def duelist(id:)
+        #    Duelist.find(id)
+        # end
+
+    field :item, ItemType, null: true do
+      description "get item by id"
+      argument :id, ID, required: true
+    end
+
+    def item(id:)
+      Item.find(id)
+    end
+
   end
 end
